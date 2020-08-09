@@ -7,6 +7,25 @@ Author URI: http://woocommerce.com
 Template: storefront 
 */
 
-.site-branding h1 a {
-    color: red; 
+/* .custom-logo img {
+    width: 100%;
+    max-width: 55px;
+} */
+
+
+.storefront-primary-navigation, .main-navigation ul.menu ul.sub-menu{
+    background-color:#f0f0f0;
 }
+
+.col-full #topbar_inline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#flexstar img{
+    width: 100%;
+    max-width: 55px;
+    align-self: start;
+}
+
