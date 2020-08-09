@@ -17,15 +17,43 @@ Template: storefront
     background-color:#f0f0f0;
 }
 
-.col-full #topbar_inline {
+#topbar {
+    background-color: black;
+}
+
+#topbar_inline {
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+    justify-content: flex-start;
+    /* align-items: baseline; */
+}
+
+#flexstar {
+    padding:0 10px;
+    margin:0 10px;
 }
 
 #flexstar img{
     width: 100%;
     max-width: 55px;
-    align-self: start;
+    margin-top: 25px;
 }
 
+#search {
+    margin-top: 25px;
+}
+
+.secondary-navigation .menu-main-menu-container .menu li{
+    font-size: 30px;
+}
+
+.secondary-navigation .menu-main-menu-container .menu {
+    display: inline-flex;
+    margin: 5px;
+    padding: 5px;
+    align-self: center;
+    float: right;
+}
+
+#bar {
+    flex: 1;
+}
