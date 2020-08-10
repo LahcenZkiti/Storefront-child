@@ -7,43 +7,41 @@ Author URI: http://woocommerce.com
 Template: storefront 
 */
 
-/* .custom-logo img {
-    width: 100%;
-    max-width: 55px;
-} */
 
-
+/* style site bar */
 .storefront-primary-navigation, .main-navigation ul.menu ul.sub-menu{
     background-color:#f0f0f0;
 }
 
-#topbar {
+#topbar, #espaceInfo {
     background-color: black;
 }
 
 #topbar_inline {
     display: flex;
-    justify-content: flex-start;
-    /* align-items: baseline; */
+    /* justify-content: flex-start;
+    align-items: baseline; */
 }
 
-#flexstar {
+div#topbar_inline div#search div.site-search div.widget.woocommerce.widget_product_search, div#topbar_inline div#search div.site-search{
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
     padding:0 10px;
     margin:0 10px;
 }
 
-#flexstar img{
+#logo img{
     width: 100%;
     max-width: 55px;
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 
-#search {
-    margin-top: 25px;
-}
 
 .secondary-navigation .menu-main-menu-container .menu li{
-    font-size: 30px;
+    font-size: 16px;
 }
 
 .secondary-navigation .menu-main-menu-container .menu {
@@ -52,8 +50,15 @@ Template: storefront
     padding: 5px;
     align-self: center;
     float: right;
+    align-items: center;
+
 }
 
-#bar {
+#icons_bar {
     flex: 1;
+}
+
+.info {
+    display: flex;
+    justify-content: space-evenly;
 }
