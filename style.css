@@ -8,35 +8,32 @@ Template: storefront
 */
 
 
-/* style site bar */
+/**
+  * top_bar css beging
+  */
 .storefront-primary-navigation, .main-navigation ul.menu ul.sub-menu{
     background-color:#f0f0f0;
 }
 
-#topbar, #espaceInfo {
+.top__bar {
     background-color: black;
-}
-
-#topbar_inline {
     display: flex;
-    /* justify-content: flex-start;
-    align-items: baseline; */
 }
 
-div#topbar_inline div#search div.site-search div.widget.woocommerce.widget_product_search, div#topbar_inline div#search div.site-search{
+
+div.top__bar div.search div.site-search div.widget.woocommerce.widget_product_search, div.top__bar div.search div.site-search{
     margin: 0;
     padding: 0;
 }
 
-#logo {
+.logo {
     padding:0 10px;
     margin:0 10px;
 }
 
-#logo img{
+.logo img{
     width: 100%;
     max-width: 55px;
-    /* margin-top: 25px; */
 }
 
 
@@ -54,11 +51,17 @@ div#topbar_inline div#search div.site-search div.widget.woocommerce.widget_produ
 
 }
 
-#icons_bar {
+.icons__bar {
     flex: 1;
 }
 
-.info {
+.top__info {
     display: flex;
     justify-content: space-evenly;
+    background-color: black;
+    padding: 15px 0;
+}
+
+div#page.hfeed.site header#masthead.site-header {
+    padding: 0;
 }
