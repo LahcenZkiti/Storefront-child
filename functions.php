@@ -1,6 +1,6 @@
 <?php 
 	/**
-	 * tob_bar_info css beging
+	 * tob_bar_info begin
 	 */
 	function storfronte_top_info() {
 		?>
@@ -37,7 +37,7 @@
 
 
 	/**
-	 * top_bar beging
+	 * top_bar_menu begin
 	 */
 
 	function storfronte_top_sidebar() {
@@ -66,12 +66,12 @@
 		<?php
 	}
 	/**
-	 * top_bar end
+	 * top_bar_menu end
 	 */
 
 
 	/**
-	 * Display the theme credit beging
+	 * Display the theme credit begin
 	 *
 	 * @since  1.0.0
 	 * @return void
@@ -110,7 +110,7 @@
 
 
 	/**
-	 * Display social icons beging
+	 * Display social icons begin
 	 * If the subscribe and connect plugin is active, display the icons.
 	 *
 	 * @link http://wordpress.org/plugins/subscribe-and-connect/
