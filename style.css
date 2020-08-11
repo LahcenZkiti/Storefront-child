@@ -65,3 +65,15 @@ div.top__bar div.search div.site-search div.widget.woocommerce.widget_product_se
 div#page.hfeed.site header#masthead.site-header {
     padding: 0;
 }
+
+/* Social media css begin */
+.social__media {
+    display: flex;
+    justify-content: center;
+}
+
+.social__media__item {
+    padding: 5px;
+    margin: 5px;
+}
+/* Social media css end */
