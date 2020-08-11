@@ -24,6 +24,9 @@
 					<!-- withget tel -->
 					<a href="tel:05 66 66 66 66"><i class="fas fa-phone"></i>05 66 66 66 66</a>
 				</div>
+				<div class="date">
+					<span> Lundi-Samedi 08h30-19h</span>
+				</div>
 			</div>
 		<?php
 	}
@@ -65,8 +68,10 @@
 	/**
 	 * top_bar end
 	 */
+
+
 	/**
-	 * Display the theme credit
+	 * Display the theme credit beging
 	 *
 	 * @since  1.0.0
 	 * @return void
@@ -99,6 +104,28 @@
 		</div><!-- .site-info -->
 		<?php
 	}
+	/**
+	 * Display the theme credit end
+	 */
+
+
+	/**
+	 * Display social icons beging
+	 * If the subscribe and connect plugin is active, display the icons.
+	 *
+	 * @link http://wordpress.org/plugins/subscribe-and-connect/
+	 * @since 1.0.0
+	 */
+	function storefront_social_icons() {
+		if ( class_exists( 'Subscribe_And_Connect' ) ) {
+			echo '<div class="subscribe-and-connect-connect">';
+			subscribe_and_connect_connect();
+			echo '</div>';
+		}
+	}
+	/**
+	 * Display social icons end
+	 */
 
 
 
