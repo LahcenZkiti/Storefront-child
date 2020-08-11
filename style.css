@@ -8,9 +8,7 @@ Template: storefront
 */
 
 
-/**
-  * top_bar css beging
-  */
+/* top_bar css begin */
 .storefront-primary-navigation, .main-navigation ul.menu ul.sub-menu{
     background-color:#f0f0f0;
 }
@@ -36,6 +34,9 @@ div.top__bar div.search div.site-search div.widget.woocommerce.widget_product_se
     max-width: 55px;
 }
 
+div#page.hfeed.site header#masthead.site-header {
+    padding: 0;
+}
 
 .secondary-navigation .menu-main-menu-container .menu li{
     font-size: 16px;
@@ -48,23 +49,25 @@ div.top__bar div.search div.site-search div.widget.woocommerce.widget_product_se
     align-self: center;
     float: right;
     align-items: center;
-
 }
 
 .icons__bar {
     flex: 1;
 }
 
+/* top_bar css end */
+
+
+/* top info css begin */
 .top__info {
     display: flex;
     justify-content: space-evenly;
     background-color: black;
     padding: 15px 0;
 }
+/* top info css begin */
 
-div#page.hfeed.site header#masthead.site-header {
-    padding: 0;
-}
+
 
 /* Social media css begin */
 .social__media {
@@ -77,3 +80,9 @@ div#page.hfeed.site header#masthead.site-header {
     margin: 5px;
 }
 /* Social media css end */
+
+/* Credit css begin */
+div#page.hfeed.site footer#colophon.site-footer div.col-full div.site-info {
+    text-align: center;
+}
+/* Credit css end */
