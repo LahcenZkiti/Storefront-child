@@ -1,6 +1,6 @@
 <?php 
 	/**
-	 * tob_bar_info begin
+	 * tob_bar_info
 	 */
 	function storfronte_top_info() {
 		?>
@@ -30,14 +30,12 @@
 			</div>
 		<?php
 	}
-	/**
-	 * tob_bar_info end
-	 */
+	add_action( 'storefront_before_site', 'storfronte_top_info');
 
 
 
 	/**
-	 * top_bar_menu begin
+	 * top_bar_menu
 	 */
 
 	function storfronte_top_sidebar() {
@@ -65,13 +63,10 @@
 		
 		<?php
 	}
-	/**
-	 * top_bar_menu end
-	 */
-
+	add_action('storefront_before_header', 'storfronte_top_sidebar');
 
 	/**
-	 * Display the theme credit begin
+	 * Display the theme credit
 	 *
 	 * @since  1.0.0
 	 * @return void
@@ -104,34 +99,37 @@
 		</div><!-- .site-info -->
 		<?php
 	}
-	/**
-	 * Display the theme credit end
-	 */
-
 
 	/**
-	 * Display social icons begin
-	 * If the subscribe and connect plugin is active, display the icons.
-	 *
-	 * @link http://wordpress.org/plugins/subscribe-and-connect/
-	 * @since 1.0.0
+	 * Customize background-color
 	 */
-	function storefront_social_icons() {
-		if ( class_exists( 'Subscribe_And_Connect' ) ) {
-			echo '<div class="subscribe-and-connect-connect">';
-			subscribe_and_connect_connect();
-			echo '</div>';
-		}
+	function storefront_customize_register( $wp_customize ) {
+		//All our sections, settings, and controls will be added here
+		$wp_customize->add_setting('header_topbar_bg', array(
+			'default' => '#000000',
+			'transport' => 'refresh',
+		));
+		$wp_customize->add_section( 'header_background' , array(
+			'title'      => __( 'Header_Topbar', 'storefront' ),
+			'priority'   => 30,
+		) );
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+			'label'      => __( 'Header Color', 'storefront' ),
+			'section'    => 'header_background',
+			'settings'   => 'header_topbar_bg',
+		) ) );
 	}
-	/**
-	 * Display social icons end
-	 */
-
-
+	 add_action( 'customize_register', 'storefront_customize_register' );
 
 
 	/**
-	 * add_action
+	 * Generating Live CSS
 	 */
-	 add_action( 'storefront_before_site', 'storfronte_top_info');
-	 add_action('storefront_before_header', 'storfronte_top_sidebar');
+	function storefront_customize_css() {
+		?>
+			<style type="text/css">
+				.top__bar, .top__info { background-color: <?php echo get_theme_mod('header_topbar_bg', '#000000'); ?>; }
+			</style>
+		<?php
+	}
+	add_action( 'wp_head', 'storefront_customize_css');
